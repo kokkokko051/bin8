@@ -1,0 +1,171 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>bin</title>
+        <script>
+            let l11=0,l12=0,l13=0,l14=0,l21=0,l22=0,l23=0,l24=0;
+            const h = ["a","b","c","d","e","f"];
+            function x(n){
+                switch(n){
+                    case 11:
+                        l11 = 0;
+                        c();
+                        break;
+                    case 12:
+                        l12 = 0;
+                        c();
+                        break;
+                    case 13:
+                        l13 = 0;
+                        c();
+                        break;
+                    case 14:
+                        l14 = 0;
+                        c();
+                        break;
+                    case 21:
+                        l21 = 0;
+                        c();
+                        break;
+                    case 22:
+                        l22 = 0;
+                        c();
+                        break;
+                    case 23:
+                        l23 = 0;
+                        c();
+                        break;
+                    case 24:
+                        l24 = 0;
+                        c();
+                        break;
+                }
+                document.getElementById(`x${n}`).style.backgroundColor = "#1a73e8";
+                document.getElementById(`o${n}`).style.backgroundColor = "#ffffff";
+            }
+            function o(n){
+                switch(n){
+                    case 11:
+                        l11 = 1;
+                        c();
+                        break;
+                    case 12:
+                        l12 = 1;
+                        c();
+                        break;
+                    case 13:
+                        l13 = 1;
+                        c();
+                        break;
+                    case 14:
+                        l14 = 1;
+                        c();
+                        break;
+                    case 21:
+                        l21 = 1;
+                        c();
+                        break;
+                    case 22:
+                        l22 = 1;
+                        c();
+                        break;
+                    case 23:
+                        l23 = 1;
+                        c();
+                        break;
+                    case 24:
+                        l24 = 1;
+                        c();
+                        break;
+                }
+                document.getElementById(`o${n}`).style.backgroundColor = "#1a73e8";
+                document.getElementById(`x${n}`).style.backgroundColor = "#ffffff";
+            }
+            function c(){
+                let f = l14 + l13*2 + l12*4 + l11*8;
+                let s = l24 + l23*2 + l22*4 + l21*8;
+                if(f>9){
+                    f = h[f-10];
+                }
+                if(s>9){
+                    s=h[s-10];
+                }
+                document.getElementById("hex").textContent = String(f)+String(s);
+            }
+        </script>
+        <style>
+            body{
+                height: 100%;
+                margin: initial;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            main{
+                display: flex;
+                align-items: center;
+                margin: 0.3vw;
+            }
+            button{
+                height: 9vw;
+                width: 9vw;
+                margin: 0.9vw;
+                font-size: larger;
+                border: solid 0.1vw #40bdff;
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            p{
+                font-size: xx-large;
+                width: 2vw;
+                margin: 1vw;
+            }
+            hr{
+                height: 21vw;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div>
+                <button id="x11" onclick="x(11);" style="background-color: #1a73e8;">0</button>
+                <button id="o11" onclick="o(11);" style="background-color: #ffffff;">1</button>
+            </div>
+            <div>
+                <button id="x12" onclick="x(12);" style="background-color: #1a73e8;">0</button>
+                <button id="o12" onclick="o(12);" style="background-color: #ffffff;">1</button>
+            </div>
+            <div>
+                <button id="x13" onclick="x(13);" style="background-color: #1a73e8;">0</button>
+                <button id="o13" onclick="o(13);" style="background-color: #ffffff;">1</button>
+            </div>
+            <div>
+                <button id="x14" onclick="x(14);" style="background-color: #1a73e8;">0</button>
+                <button id="o14" onclick="o(14);" style="background-color: #ffffff;">1</button>
+            </div>
+            <hr>
+            <div>
+                <button id="x21" onclick="x(21);" style="background-color: #1a73e8;">0</button>
+                <button id="o21" onclick="o(21);" style="background-color: #ffffff;">1</button>
+            </div>
+            <div>
+                <button id="x22" onclick="x(22);" style="background-color: #1a73e8;">0</button>
+                <button id="o22" onclick="o(22);" style="background-color: #ffffff;">1</button>
+            </div>
+            <div>
+                <button id="x23" onclick="x(23);" style="background-color: #1a73e8;">0</button>
+                <button id="o23" onclick="o(23);" style="background-color: #ffffff;">1</button>
+            </div>
+            <div>
+                <button id="x24" onclick="x(24);" style="background-color: #1a73e8;">0</button>
+                <button id="o24" onclick="o(24);" style="background-color: #ffffff;">1</button>
+            </div>
+            <p id="hex"></p>
+        </main>
+    </body>
+    <script>c();</script>
+</html>
